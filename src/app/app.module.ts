@@ -3,20 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderComponent } from './ui/header/header.component';
+import { FooterComponent } from './ui/footer/footer.component';
+import { HomepageComponent } from './ui/homepage/homepage.component';
+import { PageNotFoundComponent } from './ui/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomepageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
