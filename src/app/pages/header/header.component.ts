@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   isShowMenu: Boolean = false;
+  users: Object;
 
-  constructor() { }
+  constructor() { 
+    this.users = {
+      name: 'tyoma',
+      password: 'qwerty'
+    }
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,25 @@
+<header class="header">
+  <nav class="navbar navbar-expand-md navbar-default">
+    <a class="navbar-brand" routerLink="/home">Coolz</a>
+    <div class="navbar-toggler" (click)="isShowMenu = !isShowMenu">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="navbar-collapse collapse justify-content-end" [ngClass]="{'show' : isShowMenu}">
+      <ul class="navbar-nav" dropdown>
+        <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/contacts" routerLinkActive="active">Contacts</a></li>
+        <li class="nav-item dropdown" *ngIf="!users">
+          <a dropdownToggle class="nav-link dropdown-toggle" aria-controls="dropdown-basic">
+            {{users.name}} <span class="caret"></span>
+          </a>
+        
+          <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+            <li role="menuitem"><a class="dropdown-item" routerLink="user/account">My Account</a></li>
+            <li role="menuitem"><a class="dropdown-item" routerLink="user/login">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
