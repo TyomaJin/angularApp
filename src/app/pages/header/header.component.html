@@ -9,7 +9,7 @@
         <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="/about" routerLinkActive="active">About</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="/contacts" routerLinkActive="active">Contacts</a></li>
-        <li class="nav-item dropdown" *ngIf="!users">
+        <li class="nav-item dropdown" *ngIf="users">
           <a dropdownToggle class="nav-link dropdown-toggle" aria-controls="dropdown-basic">
             {{users.name}} <span class="caret"></span>
           </a>
